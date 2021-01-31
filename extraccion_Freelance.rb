@@ -57,7 +57,7 @@ class Scraper
       presupuesto=parsed2.css('p.PageProjectViewLogout-header-byLine').text.split('Budget')[1].strip.split(' ')[0].gsub(/[$€₹£]/,'')
       puts("Presupuesto:#{presupuesto}")
 
-      ubicacion=container2.css('span.PageProjectViewLogout-detail-reputation-item-locationItem').text.strip
+      ubicacion=container2.css('span.PageProjectViewLogout-detail-reputation-item-locationItem').text.strip.split(",")[1]
       puts("Ubicacion:#{ubicacion}")
 
       habilidades=container2.css('a.PageProjectViewLogout-detail-tags-link--highlight').text
