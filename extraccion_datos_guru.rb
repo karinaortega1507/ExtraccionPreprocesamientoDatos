@@ -33,8 +33,8 @@ class Scraper
     pagina = 1
     url = 'https://www.guru.com/d/freelancers/'
     url += 'skill/' + skill
-    #(1..3).each do |i|
-      link = url #+ "/pg/{i}/"
+    (1..3).each do |i|
+      link = url + "/pg/#{i}/"
       document = open(link)
       content = document.read
       parserd_content = Nokogiri::HTML(content)
@@ -50,7 +50,10 @@ class Scraper
         if (costo[2] == "/")
           costo_por_hora = costo[1]
         end
-        sueldo_anual = row.css('.earnings .earnings__amount').inner_text
+             
+
+        sueldo = row.css('.earnings .earnings__amount').inner_text
+        sueldo_anual = sueldo.delete(',').to_i
         puts "Avatar freelancer: #{avatarinfo}"
         puts "pais: #{pais}"
         puts "Habilidades: #{habilidades}"
@@ -61,7 +64,7 @@ class Scraper
         habilidad.registrar(skill)
         puts '---------------------------------------------------------------------------'
       end
-    #end
+    end
   end
 end
 puts 'Habilidades'
@@ -74,4 +77,3 @@ CSV.open(nombre_archivo, 'w') do |csv|
   csv << %w[avatar pais habilidades categoria costo_por_hora sueldo_anual]
 end
 scrap = Scraper.new.extraer(habilidad)
-
