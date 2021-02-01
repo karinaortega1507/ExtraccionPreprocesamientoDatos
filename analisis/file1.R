@@ -1,16 +1,6 @@
 #instalar paquetes
-#install.packages("readr")
-#install.packages("RSocrata")
-#install.packages("haven")
-#install.packages("sjPlot")
 install.packages("dplyr")
-# cargar paquete readr
-#library(readr)
-#library(haven)
-#library(sjPlot)
 library(ggplot2)
-#library(tidyr)
-#library("RSocrata")
 library("dplyr")
 library(MASS)
 #1. importar datos predatos
