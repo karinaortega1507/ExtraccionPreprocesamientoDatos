@@ -34,7 +34,7 @@ ggsave("Piechart.png", width = 18, height = 14)
 
 write.csv(x = porcentaje, file = "Porcentajes.csv", row.names = FALSE)
 
-#grafico de dispersión entre la oferta media general
+#grafico de dispersión entre la oferta media y el numero de ofertas en general
 corr=round(cor(data$Oferta,data$Numero_Ofertas),3)
 ggplot(data, aes(Oferta,Numero_Ofertas))+ geom_point()+ 
   xlab("OfertaMedia")+
