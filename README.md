@@ -4,3 +4,5 @@ Creación de un extractor de información (crawler) empleo freelancer, para el a
 Jocelyn Chicaiza Extraccion de datos Freelancer en  https://www.freelancer.com/jobs/.
 
 Karina Ortega Extraccion de datos Freelancer en  https://www.guru.com/d/freelancers/skill/
+
+Edwin Ullaguari Extraccion de datos Workana en https://www.workana.com/es/freelancers?ref=home_top_bar
